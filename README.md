@@ -28,11 +28,15 @@ After setting up my own repo, I found the author's:
 
 2. Install `portaudio19-dev`:
 
+    ```
     $ sudo apt-get install portaudio19-dev
+    ```
 
 3. Install `pyaudio`:
 
+    ```
     $ pip install --user pyaudio
+    ```
 
 4. Verify installation:
 
@@ -229,4 +233,4 @@ Run the guessing game as follows:
 - [x] Add `monotonic` as an optional component for Python 2
 - [ ] Retry with PocketSphinx (works offline)
 - [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
-- [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a Node.js SDK)
+- [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a [Node.js SDK](https://github.com/wit-ai/node-wit))
