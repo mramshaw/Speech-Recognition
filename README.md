@@ -55,51 +55,51 @@ The tutorial uses __Google Web Speech API__, however it looks like installing [P
 
 The final step may take a few seconds to execute:
 
-    ``` Python
-    >>> import speech_recognition as sr
-    >>> r = sr.Recognizer()
-    >>> harvard = sr.AudioFile('audio_files/harvard.wav')
-    >>> with harvard as source:
-    ...     audio = r.record(source)
-    ... 
-    >>> type(audio)
-    <class 'speech_recognition.AudioData'>
-    >>> r.recognize_google(audio)
-    u'the stale smell of old beer lingers it takes heat to bring out the odor a cold dip restores health and zest a salt pickle taste fine with ham tacos al Pastore are my favorite a zestful food is the hot cross bun'
-    >>> 
-    ```
+``` Python
+>>> import speech_recognition as sr
+>>> r = sr.Recognizer()
+>>> harvard = sr.AudioFile('audio_files/harvard.wav')
+>>> with harvard as source:
+...     audio = r.record(source)
+... 
+>>> type(audio)
+<class 'speech_recognition.AudioData'>
+>>> r.recognize_google(audio)
+u'the stale smell of old beer lingers it takes heat to bring out the odor a cold dip restores health and zest a salt pickle taste fine with ham tacos al Pastore are my favorite a zestful food is the hot cross bun'
+>>> 
+```
 
 #### Ambient Noise
 
-    ``` Python
-    >>> jackhammer = sr.AudioFile('audio_files/jackhammer.wav')
-    >>> with jackhammer as source:
-    ...     audio = r.record(source)
-    ... 
-    >>> r.recognize_google(audio)
-    u'the snail smell of old beer drinkers'
-    >>> with jackhammer as source:
-    ...     r.adjust_for_ambient_noise(source)
-    ...     audio = r.record(source)
-    ... 
-    >>> r.recognize_google(audio)
-    u'still smell old gear vendors'
-    >>> 
-    ```
+``` Python
+>>> jackhammer = sr.AudioFile('audio_files/jackhammer.wav')
+>>> with jackhammer as source:
+...     audio = r.record(source)
+... 
+>>> r.recognize_google(audio)
+u'the snail smell of old beer drinkers'
+>>> with jackhammer as source:
+...     r.adjust_for_ambient_noise(source)
+...     audio = r.record(source)
+... 
+>>> r.recognize_google(audio)
+u'still smell old gear vendors'
+>>> 
+```
 
 [Slightly different from the tutorial's 'the snail smell of old gear vendors' and 'still smell of old beer vendors'.]
 
 And:
 
-    ``` Python
-    >>> with jackhammer as source:
-    ...     r.adjust_for_ambient_noise(source, duration=0.5)
-    ...     audio = r.record(source)
-    ... 
-    >>> r.recognize_google(audio)
-    u'the snail smell like old beermongers'
-    >>>
-    ```
+``` Python
+>>> with jackhammer as source:
+...     r.adjust_for_ambient_noise(source, duration=0.5)
+...     audio = r.record(source)
+... 
+>>> r.recognize_google(audio)
+u'the snail smell like old beermongers'
+>>>
+```
 
 [Pretty much the same as 'the snail smell like old Beer Mongers'.]
 
@@ -120,29 +120,29 @@ Using the speech recognition module:
 
 And:
 
-    ``` Python
-    >>> with mic as source:
-    ...     audio = r.listen(source)
-    ... 
-    >>> r.recognize_google(audio)
-    u'Shazam'
-    >>>
-    ```
+``` Python
+>>> with mic as source:
+...     audio = r.listen(source)
+... 
+>>> r.recognize_google(audio)
+u'Shazam'
+>>>
+```
 
 And, as stated in the article, a loud hand-clap generates an exception:
 
-    ``` Python
-    >>> with mic as source:
-    ...     audio = r.listen(source)
-    ... 
-    >>> r.recognize_google(audio)
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-      File "/home/owner/.local/lib/python2.7/site-packages/speech_recognition/__init__.py", line 858, in recognize_google
-        if not isinstance(actual_result, dict) or len(actual_result.get("alternative", [])) == 0: raise UnknownValueError()
-    speech_recognition.UnknownValueError
-    >>>
-    ```
+``` Python
+>>> with mic as source:
+...     audio = r.listen(source)
+... 
+>>> r.recognize_google(audio)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/owner/.local/lib/python2.7/site-packages/speech_recognition/__init__.py", line 858, in recognize_google
+    if not isinstance(actual_result, dict) or len(actual_result.get("alternative", [])) == 0: raise UnknownValueError()
+speech_recognition.UnknownValueError
+>>>
+```
 
 ## And finallly, the guessing game
 
