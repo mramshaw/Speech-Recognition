@@ -50,17 +50,23 @@ recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Py
 
 1. Check for `monotonic`:
 
+    ```
     $ pip list --format=legacy | grep monotonic
+    ```
 
-2. Install ``:
+2. Install `monotonic`:
 
-    $ pip install --user
+    ```
+    $ pip install --user monotonic
+    ```
 
 3. Verify installation:
 
+    ```
     $ pip list --format=legacy | grep monotonic
     monotonic (1.4)
     $
+    ```
 
 #### For speech recognition
 
@@ -72,11 +78,15 @@ This is probably fine for occasional use - but there are better options availabl
 
 1. Check for `SpeechRecognition`:
 
+    ```
     $ pip list --format=legacy | grep SpeechRecognition
+    ```
 
 2. Install `SpeechRecognition`:
 
+    ```
     $ pip install --user SpeechRecognition
+    ```
 
 3. Verify:
 
@@ -130,7 +140,7 @@ u'still smell old gear vendors'
 >>> 
 ```
 
-[Slightly different from the tutorial's 'the snail smell of old gear vendors' and 'still smell of old beer vendors'.]
+[Slightly different from the tutorial's `the snail smell of old gear vendors` and `still smell of old beer vendors`.]
 
 And:
 
@@ -144,7 +154,8 @@ u'the snail smell like old beermongers'
 >>>
 ```
 
-[Pretty much the same as 'the snail smell like old Beer Mongers'.]
+[Pretty much the same as `the snail smell like old Beer Mongers`.]
+
 
 ## Speech testing
 
@@ -187,6 +198,7 @@ speech_recognition.UnknownValueError
 >>>
 ```
 
+
 ## And finally, the guessing game
 
 Run the guessing game as follows:
@@ -209,6 +221,7 @@ Run the guessing game as follows:
     Sorry, you lose!
     I was thinking of 'apple'.
     $
+
 
 ## To Do
 
