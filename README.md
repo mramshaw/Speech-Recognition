@@ -16,7 +16,13 @@ After setting up my own repo, I found the author's:
 
 1. Check for `pyaudio`:
 
-    $ pip list --format=legacy | grep pyaudio
+    ``` Python
+    >>> import pyaudio as pa
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ImportError: No module named pyaudio
+    >>>
+    ```
 
 [The next step is for linux; check the [pyaudio requirements](http://people.csail.mit.edu/hubert/pyaudio/#downloads) first.]
 
@@ -24,13 +30,47 @@ After setting up my own repo, I found the author's:
 
     $ sudo apt-get install portaudio19-dev
 
-3. Install  `pyaudio`:
+3. Install `pyaudio`:
 
-    $ pip install pyaudio
+    $ pip install --user pyaudio
+
+4. Verify installation:
+
+    ``` Python
+    >>> import pyaudio as pa
+    >>> pa.__version__
+    '0.2.11'
+    >>>
+    ```
+
+#### Optional: monotonic (for Python 2)
+
+[SpeechRecognition](https://github.com/Uberi/speech_recognition#monotonic-for-python-2-for-faster-operations-in-some-functions-on-python-2)
+recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Python 2 users.
+
+1. Check for `monotonic`:
+
+    $ pip list --format=legacy | grep monotonic
+
+2. Install ``:
+
+    $ pip install --user
+
+3. Verify installation:
+
+    $ pip list --format=legacy | grep monotonic
+    monotonic (1.4)
+    $
 
 #### For speech recognition
 
-1. Check for `pyaudio`:
+SpeechRecognition can be used as a _sound recorder_:
+
+    https://github.com/Uberi/speech_recognition/blob/master/examples/write_audio.py
+
+This is probably fine for occasional use - but there are better options available.
+
+1. Check for `SpeechRecognition`:
 
     $ pip list --format=legacy | grep SpeechRecognition
 
@@ -47,9 +87,12 @@ After setting up my own repo, I found the author's:
     >>>
     ```
 
+
 ## Speech Engine
 
-The tutorial uses __Google Web Speech API__, however it looks like installing [PocketSphinx](https://cmusphinx.github.io/) would be pretty easy.
+The tutorial uses __Google Web Speech API__, however it looks like installing [PocketSphinx](https://cmusphinx.github.io/)
+(which can work offline) would be pretty easy. And [Snowboy](https://snowboy.kitt.ai/) (which can also work offline) is
+another option.
 
 #### Smoke Test
 
@@ -144,7 +187,9 @@ speech_recognition.UnknownValueError
 >>>
 ```
 
-## And finallly, the guessing game
+## And finally, the guessing game
+
+Run the guessing game as follows:
 
     $ python guessing_game.py
     I'm thinking of one of these words:
@@ -167,4 +212,8 @@ speech_recognition.UnknownValueError
 
 ## To Do
 
-- [ ] Retry with PocketSphinx
+- [x] Add original License (this is probably 'fair use' but better safe than sorry)
+- [x] Add `monotonic` as an optional component for Python 2
+- [ ] Retry with PocketSphinx (works offline)
+- [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
+- [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a Node.js SDK)
