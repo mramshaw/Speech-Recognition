@@ -104,9 +104,9 @@ This is probably fine for occasional use - but there are better options availabl
 
 ## Speech Engine
 
-The tutorial uses __Google Web Speech API__, however it looks like installing [PocketSphinx](https://cmusphinx.github.io/)
-(which can work offline) would be pretty easy. And [Snowboy](https://snowboy.kitt.ai/) (which can also work offline) is
-another option.
+The tutorial uses the __Google Web Speech API__, however installing [PocketSphinx](https://cmusphinx.github.io/)
+(which can work offline) is fairly easy. And [Snowboy](https://snowboy.kitt.ai/) (which can also work offline)
+is another option.
 
 #### Smoke Test
 
@@ -231,6 +231,6 @@ Run the guessing game as follows:
 
 - [x] Add original License (this is probably 'fair use' but better safe than sorry)
 - [x] Add `monotonic` as an optional component for Python 2
-- [ ] Retry with PocketSphinx (works offline)
+- [x] Retry with PocketSphinx (works offline)
 - [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
 - [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a [Node.js SDK](https://github.com/wit-ai/node-wit))
