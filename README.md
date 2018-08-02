@@ -10,6 +10,10 @@ After setting up my own repo, I found the author's:
 
     https://github.com/realpython/python-speech-recognition
 
+![Raspberry](images/favicon.png)
+
+This also works with Raspberry Pi (using Python 3).
+
 ## Prerequisites
 
 #### For microphone use
@@ -227,6 +231,17 @@ Run the guessing game as follows:
     $
 
 
+## Raspberry Pi
+
+![Raspberry Pi](images/little_pi.png)
+
+After hooking up a Raspberry Pi with a Logitech 4000 webcam (for its microphone),
+and configuring with AlsaMixer, everything worked pretty much as expected with
+Python 3.
+
+There were some installation stumbles, but `sudo apt-get update` fixed them.
+
+
 ## To Do
 
 - [x] Add original License (this is probably 'fair use' but better safe than sorry)
@@ -234,3 +249,4 @@ Run the guessing game as follows:
 - [x] Retry with PocketSphinx (works offline)
 - [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
 - [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a [Node.js SDK](https://github.com/wit-ai/node-wit))
+- [x] Try with Raspberry Pi (works nicely)
