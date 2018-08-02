@@ -235,11 +235,13 @@ Run the guessing game as follows:
 
 ![Raspberry Pi](images/little_pi.png)
 
-After hooking up a Raspberry Pi with a Logitech 4000 webcam (for its microphone),
+After hooking up a Raspberry Pi with a Logitech 4000 webcam (for its microphone)
 and configuring with AlsaMixer, everything worked pretty much as expected with
 Python 3.
 
 There were some installation stumbles, but `sudo apt-get update` fixed them.
+
+It turned out that `flac` was required so it was also installed.
 
 
 ## To Do
