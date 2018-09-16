@@ -1,6 +1,6 @@
 # Speech Recognition with Python
 
-[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/Speech-Recognition/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/Speech-Recognition?targetFile=requirements.txt)
+[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/Speech-Recognition/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/Speech-Recognition?style=plastic&targetFile=requirements.txt)
 
 I stumbled across this great tutorial, so why not try it out?
 
