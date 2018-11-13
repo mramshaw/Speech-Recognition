@@ -61,7 +61,7 @@ recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Py
 1. Check for `monotonic`:
 
     ```
-    $ pip list --format=legacy | grep monotonic
+    $ pip list --format=freeze | grep monotonic
     ```
 
 2. Install `monotonic`:
@@ -73,8 +73,8 @@ recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Py
 3. Verify installation:
 
     ```
-    $ pip list --format=legacy | grep monotonic
-    monotonic (1.4)
+    $ pip list --format=freeze | grep monotonic
+    monotonic==1.4
     $
     ```
 
@@ -89,7 +89,7 @@ This is probably fine for occasional use - but there are better options availabl
 1. Check for `SpeechRecognition`:
 
     ```
-    $ pip list --format=legacy | grep SpeechRecognition
+    $ pip list --format=freeze | grep SpeechRecognition
     ```
 
 2. Install `SpeechRecognition`:
@@ -254,3 +254,4 @@ It turned out that `flac` was required so it was also installed.
 - [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
 - [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a [Node.js SDK](https://github.com/wit-ai/node-wit))
 - [x] Try with Raspberry Pi (works nicely)
+- [x] Update for recent versions of `pip`
