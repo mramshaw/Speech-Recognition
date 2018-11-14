@@ -1,16 +1,16 @@
 # Speech Recognition with Python
 
-[![Known Vulnerabilities](https://snyk.io/test/github/mramshaw/Speech-Recognition/badge.svg?style=plastic&targetFile=requirements.txt)](https://snyk.io/test/github/mramshaw/Speech-Recognition?style=plastic&targetFile=requirements.txt)
+[![Known Vulnerabilities](http://snyk.io/test/github/mramshaw/Speech-Recognition/badge.svg?style=plastic&targetFile=requirements.txt)](http://snyk.io/test/github/mramshaw/Speech-Recognition?style=plastic&targetFile=requirements.txt)
 
 I stumbled across this great tutorial, so why not try it out?
 
-    https://realpython.com/python-speech-recognition/
+    http://realpython.com/python-speech-recognition/
 
-As recommended, we will use [SpeechRecognition](https://github.com/Uberi/speech_recognition).
+As recommended, we will use [SpeechRecognition](http://github.com/Uberi/speech_recognition).
 
 After setting up my own repo, I found the author's:
 
-    https://github.com/realpython/python-speech-recognition
+    http://github.com/realpython/python-speech-recognition
 
 ![Raspberry](images/favicon.png)
 
@@ -55,8 +55,8 @@ This also works with Raspberry Pi (using Python 3).
 
 #### Optional: monotonic (for Python 2)
 
-[SpeechRecognition](https://github.com/Uberi/speech_recognition#monotonic-for-python-2-for-faster-operations-in-some-functions-on-python-2)
-recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Python 2 users.
+[SpeechRecognition](http://github.com/Uberi/speech_recognition#monotonic-for-python-2-for-faster-operations-in-some-functions-on-python-2)
+recommends installing [monotonic](http://pypi.python.org/pypi/monotonic) for Python 2 users.
 
 1. Check for `monotonic`:
 
@@ -82,7 +82,7 @@ recommends installing [monotonic](https://pypi.python.org/pypi/monotonic) for Py
 
 SpeechRecognition can be used as a _sound recorder_:
 
-    https://github.com/Uberi/speech_recognition/blob/master/examples/write_audio.py
+    http://github.com/Uberi/speech_recognition/blob/master/examples/write_audio.py
 
 This is probably fine for occasional use - but there are better options available.
 
@@ -110,9 +110,13 @@ This is probably fine for occasional use - but there are better options availabl
 
 ## Speech Engine
 
-The tutorial uses the __Google Web Speech API__, however installing [PocketSphinx](https://cmusphinx.github.io/)
-(which can work offline) is fairly easy. And [Snowboy](https://snowboy.kitt.ai/) (which can also work offline)
-is another option.
+The tutorial uses the __Google Web Speech API__, however installing [PocketSphinx](http://cmusphinx.github.io/)
+(which can work offline) is fairly easy.
+
+[Snowboy](http://snowboy.kitt.ai/) (which can also work offline) is an option for Hotword Detection, but perhaps
+unsuitable for speech recognition (SpeechRecognition tellingly refers to Snowboy as "Snowboy Hotword Detection").
+
+For another online option, there is [Wit.ai](http://github.com/wit-ai/pywit) (which also has a [Node.js SDK](http://github.com/wit-ai/node-wit)).
 
 #### Smoke Test
 
@@ -251,7 +255,7 @@ It turned out that `flac` was required so it was also installed.
 - [x] Add original License (this is probably 'fair use' but better safe than sorry)
 - [x] Add `monotonic` as an optional component for Python 2
 - [x] Retry with PocketSphinx (works offline)
-- [ ] Retry with [Snowboy](https://snowboy.kitt.ai/) (works offline)
-- [ ] Retry with [Wit.ai](https://github.com/wit-ai/pywit) (which also has a [Node.js SDK](https://github.com/wit-ai/node-wit))
+- [x] Retry with [Snowboy](http://snowboy.kitt.ai/) (works offline)
+- [ ] Retry with [Wit.ai](http://github.com/wit-ai/pywit) (which also has a [Node.js SDK](http://github.com/wit-ai/node-wit))
 - [x] Try with Raspberry Pi (works nicely)
 - [x] Update for recent versions of `pip`
