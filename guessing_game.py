@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+
+# pylint: disable=C0103
+
+"""
+A simple Guessing Game to test speech recognition.
+
+A random fruit is chosen, and the user has three tries to guess which.
+"""
+
+from __future__ import print_function
+
 import random
 import time
 
@@ -5,7 +17,7 @@ import speech_recognition as sr
 
 
 def recognize_speech_from_mic(recognizer, microphone):
-    """Transcribe speech from recorded from `microphone`.
+    """Transcribe speech recorded from `microphone`.
 
     Returns a dictionary with three keys:
     "success": a boolean indicating whether or not the API request was
@@ -110,7 +122,7 @@ if __name__ == "__main__":
         # if not, repeat the loop if user has more attempts
         # if no attempts left, the user loses the game
         if guess_is_correct:
-            print("Correct! You win!".format(word))
+            print("Correct! You win!")
             break
         elif user_has_more_attempts:
             print("Incorrect. Try again.\n")

@@ -259,3 +259,5 @@ It turned out that `flac` was required so it was also installed.
 - [ ] Retry with [Wit.ai](http://github.com/wit-ai/pywit) (which also has a [Node.js SDK](http://github.com/wit-ai/node-wit))
 - [x] Try with Raspberry Pi (works nicely)
 - [x] Update for recent versions of `pip`
+- [x] Update code to conform to `pylint`, `pycodestyle` and `pydocstyle`
+- [x] Update code for Python 3
