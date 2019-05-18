@@ -16,6 +16,22 @@ After setting up my own repo, I found the author's:
 
 This also works with Raspberry Pi (using Python 3).
 
+## Contents
+
+The contents are as follows:
+
+* [Prerequisites](#prerequisites)
+    * [For microphone use](#for-microphone-use)
+    * [Optional: monotonic (for Python 2)](#optional-monotonic-for-python-2)
+    * [For speech recognition](#for-speech-recognition)
+* [Speech Engine](#speech-engine)
+    * [Smoke Test](#smoke-test)
+    * [Ambient Noise](#ambient-noise)
+* [Speech testing](#speech-testing)
+* [And finally, the guessing game](#and-finally-the-guessing-game)
+* [Raspberry Pi](#raspberry-pi)
+* [To Do](#to-do)
+
 ## Prerequisites
 
 #### For microphone use
@@ -261,3 +277,4 @@ It turned out that `flac` was required so it was also installed.
 - [x] Update for recent versions of `pip`
 - [x] Update code to conform to `pylint`, `pycodestyle` and `pydocstyle`
 - [x] Update code for Python 3
+- [x] Add table of Contents
