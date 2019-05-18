@@ -34,6 +34,9 @@ The contents are as follows:
 
 ## Prerequisites
 
+Python 3 and `pip` installed (Python 2 is scheduled for End-of-life, although the instructions and
+code have been tested with Python 2 and an approprate `requirements` file for Python 2 is provided).
+
 #### For microphone use
 
 1. Check for `pyaudio`:
@@ -276,5 +279,6 @@ It turned out that `flac` was required so it was also installed.
 - [x] Try with Raspberry Pi (works nicely)
 - [x] Update for recent versions of `pip`
 - [x] Update code to conform to `pylint`, `pycodestyle` and `pydocstyle`
+- [x] Update `requirements` files to fix Snyk.io quibbles
 - [x] Update code for Python 3
 - [x] Add table of Contents
